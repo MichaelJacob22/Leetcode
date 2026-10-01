@@ -14,7 +14,6 @@ class Solution:
             ans += dist[u]
             for v in range(n):
                 if not visited[v]:
-                    cost = abs(points[u][0] - points[v][0]) \
-                         + abs(points[u][1] - points[v][1])
+                    cost = abs(points[u][0] - points[v][0]) + abs(points[u][1] - points[v][1])
                     dist[v] = min(dist[v], cost)
         return ans
